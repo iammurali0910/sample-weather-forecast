@@ -9,7 +9,7 @@ const Home = () => {
   //fetch data asyn function
   const fetchData = async () => {
     const result = await axios(
-      "http://api.openweathermap.org/data/2.5/forecast?id=4517009&count=5&appid=64813bed39e7e05d3566344699c07414"
+      "https://api.openweathermap.org/data/2.5/forecast?id=4517009&count=5&appid=64813bed39e7e05d3566344699c07414"
     );
     setCityName(result.data.city.name);
     setCityWeatherInfo(result.data.list);
