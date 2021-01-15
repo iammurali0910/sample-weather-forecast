@@ -33,7 +33,10 @@ const Home = () => {
     if (utcTime < 12) {
       if (utcTime === 0) utcTime = utcTime + 12 + "AM";
       else utcTime = utcTime + "AM";
-    } else utcTime = (utcTime % 12) + "PM";
+    } else {
+      if (utcTime === 12) utcTime = utcTime + "PM";
+      else utcTime = (utcTime % 12) + "PM";
+    }
     return utcTime;
   };
 
